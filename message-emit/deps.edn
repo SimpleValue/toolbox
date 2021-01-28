@@ -1,0 +1,2 @@
+{:deps {sv/message-logging {:local/root "../message-logging"}
+        sv/util-core {:local/root "../util-core"}}}
