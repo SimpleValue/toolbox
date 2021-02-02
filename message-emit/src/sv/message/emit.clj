@@ -44,7 +44,9 @@
                         (add-message-uuid)
                         (add-timestamp))
               (not (:message/emit message))
-              (assoc :message/emit emit!))]
+              (assoc :message/emit
+                     (partial emit!
+                              registry)))]
     (log msg)
     (dispatch! registry
                msg)
